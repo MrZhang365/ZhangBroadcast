@@ -136,8 +136,8 @@ const COMMANDS = {
 
 setInterval(() => {
     var i = 0
-    for (i in server.clients){
-        server.clients[i].ping()
+    for (i in clients){
+        clients[i].ping()
     }
 },30000)
 
@@ -172,8 +172,8 @@ function broadcast(payload,toBroadCaster = false){
 
 function exit(){
     var i = 0
-    for (i in server.clients){
-        server.clients[i].terminate()
+    for (i in clients){
+        clients[i].terminate()
     }
     process.exit(0)
 }
